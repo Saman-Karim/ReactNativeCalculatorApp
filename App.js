@@ -19,12 +19,12 @@ export default class App extends Component {
         if (this.operations.indexOf(lastChar) > 0) return
         console.log(text, eval(text))
         this.setState({
-            calculationText: eval(text)
+            calculationText: eval(text),
+            resultText : ''
         })
     }
 
     buttonPressed(text) {
-
         if (text == '=') {
             return this.calculateResult()
         }
