@@ -47,6 +47,12 @@ export default class App extends Component {
                 const lastChar = this.state.resultText.split('').pop()
                 if (this.operations.indexOf(lastChar) > 0) return
                 if (this.state.text == "") return
+                if (this.state.resultText == '') {
+                    this.setState({
+                        resultText: this.state.calculationText + operation
+                    })
+                    return
+                }
                 this.setState({
                     resultText: this.state.resultText + operation
                 })
